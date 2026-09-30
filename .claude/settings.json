@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:antigravity.google)",
+      "WebFetch(domain:codelabs.developers.google.com)",
+      "Read(//Users/tuan.1495icloud.com/.antigravity/antigravity/bin/**)",
+      "Bash(command -v agy antigravity)",
+      "Bash(~/.antigravity/antigravity/bin/agy --version)",
+      "Bash(~/.antigravity/antigravity/bin/agy --help)",
+      "Bash(ls -la ~/.antigravity/antigravity/bin/)",
+      "Bash(pkill -f \"PR Report.app\")",
+      "Bash(.venv/bin/pyinstaller --noconfirm --windowed --name \"PR Report\" --icon icon.icns --osx-bundle-identifier com.tuan.prreport daily_report.py)",
+      "Bash(rm -rf \"/Applications/PR Report.app\")",
+      "Bash(ditto \"dist/PR Report.app\" \"/Applications/PR Report.app\")",
+      "Bash(open \"/Applications/PR Report.app\")"
+    ]
+  }
+}
