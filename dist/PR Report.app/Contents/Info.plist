@@ -18,6 +18,8 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>0.0.0</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>PR Report opens your Parabol tab in Brave after copying the summary.</string>
 	<key>NSHighResolutionCapable</key>
 	<true/>
 </dict>

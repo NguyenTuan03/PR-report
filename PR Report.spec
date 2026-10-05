@@ -48,4 +48,8 @@ app = BUNDLE(
     name='PR Report.app',
     icon='icon.icns',
     bundle_identifier='com.tuan.prreport',
+    info_plist={
+        # Lý do hiện trong hộp thoại xin quyền điều khiển Brave (mở tab Parabol).
+        'NSAppleEventsUsageDescription': 'PR Report opens your Parabol tab in Brave after copying the summary.',
+    },
 )

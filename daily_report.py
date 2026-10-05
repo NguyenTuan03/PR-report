@@ -156,6 +156,41 @@ def summarize(prs: list[dict]) -> tuple[list[str], str]:
     )
 
 
+PARABOL_URL = "https://action.parabol.co"
+
+# Brave dùng chung bộ lệnh AppleScript với Chrome. Nhảy tới tab Parabol đang mở,
+# không có thì mở tab mới (hoặc cửa sổ mới nếu Brave chưa có cửa sổ nào).
+REVEAL_PARABOL_SCRIPT = f'''
+tell application "Brave Browser"
+    activate
+    set found to false
+    repeat with w in windows
+        set i to 0
+        repeat with t in tabs of w
+            set i to i + 1
+            if URL of t contains "parabol.co" then
+                set active tab index of w to i
+                set index of w to 1
+                set found to true
+                exit repeat
+            end if
+        end repeat
+        if found then exit repeat
+    end repeat
+    if not found then
+        if (count of windows) = 0 then make new window
+        tell window 1 to make new tab with properties {{URL:"{PARABOL_URL}"}}
+    end if
+end tell
+'''
+
+
+def reveal_parabol_tab() -> None:
+    # Chạy nền, không chặn UI; lần đầu macOS hỏi quyền "PR Report muốn điều khiển Brave".
+    subprocess.Popen(["osascript", "-e", REVEAL_PARABOL_SCRIPT],
+                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+
 def format_report(lines: list[str]) -> str:
     # Định dạng paste vào Notion/Parabol.
     return "\n".join(["Today:", "", *(f"* {t}" for t in lines)])
@@ -380,6 +415,8 @@ class App(tk.Tk):
                 self.summary_report = format_report(lines)
                 self._show_lines(self.summary, lines)
                 self.on_copy_summary()
+                reveal_parabol_tab()
+                self.status.config(text=f"✓ Copied · Parabol opened · {stamp}", fg=MUTED)
             elif kind == "summary_error":
                 self._show_message(self.summary, str(payload), "error")
                 self.status.config(text=f"Summary failed at {stamp}", fg=ERROR)

@@ -13,7 +13,16 @@
       "Bash(.venv/bin/pyinstaller --noconfirm --windowed --name \"PR Report\" --icon icon.icns --osx-bundle-identifier com.tuan.prreport daily_report.py)",
       "Bash(rm -rf \"/Applications/PR Report.app\")",
       "Bash(ditto \"dist/PR Report.app\" \"/Applications/PR Report.app\")",
-      "Bash(open \"/Applications/PR Report.app\")"
+      "Bash(open \"/Applications/PR Report.app\")",
+      "Bash(cd \"/Applications/Tuan/Fetch PR commit\" && ls -d /Applications/Brave*.app; git status --short | head; sed -n '/BUNDLE\\(/,$p' \"PR Report.spec\")",
+      "Read(//Applications/**)",
+      "Bash(/opt/homebrew/bin/python3 -)",
+      "Bash(sed -n '/BUNDLE\\(/,$p' 'PR Report.spec')",
+      "Bash(.venv/bin/python -c ' *)",
+      "Bash(osascript -e 'tell application \"Brave Browser\" to get URL of active tab of window 1')"
+    ],
+    "additionalDirectories": [
+      "/Applications/Tuan/Fetch PR commit"
     ]
   }
 }
