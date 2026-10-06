@@ -2,11 +2,23 @@
 
 
 a = Analysis(
-    ['daily_report.py'],
+    ['app_launcher.py'],
     pathex=[],
     binaries=[],
-    datas=[],
-    hiddenimports=[],
+    datas=[('daily_report.py', '.')],
+    hiddenimports=[
+        'queue',
+        'json',
+        'shutil',
+        'subprocess',
+        'tempfile',
+        'urllib.request',
+        'concurrent.futures',
+        'datetime',
+        'enum',
+        'tkinter',
+        'tkinter.font',
+    ],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],

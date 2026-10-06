@@ -1298,7 +1298,11 @@
 		</data>
 		<key>Resources/base_library.zip</key>
 		<data>
-		Gec9CKCV5esNYYR4ZBNVTB684oY=
+		Oj1JyYLCY5rb6LLOYgovGQLLlto=
+		</data>
+		<key>Resources/daily_report.py</key>
+		<data>
+		bfqem+Zk+4GYl/VNAsqG4x9ZOn0=
 		</data>
 		<key>Resources/icon.icns</key>
 		<data>
@@ -1372,6 +1376,11 @@
 		<dict>
 			<key>symlink</key>
 			<string>../Resources/base_library.zip</string>
+		</dict>
+		<key>Frameworks/daily_report.py</key>
+		<dict>
+			<key>symlink</key>
+			<string>../Resources/daily_report.py</string>
 		</dict>
 		<key>Frameworks/libcrypto.3.dylib</key>
 		<dict>
@@ -4158,7 +4167,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0mQkIq4aLNwDhm+xWFXrT0Sh37N5Lu7QI1k2el2zWQs=
+			Nm6IyUelwuiswhDZkkNLu8kHF4iWJ6HbK9LXOnFZsaE=
+			</data>
+		</dict>
+		<key>Resources/daily_report.py</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LkjeHOKjOOrqaKfU0GqhPBoJ5ETSNyzNRPdweVTFBbg=
 			</data>
 		</dict>
 		<key>Resources/icon.icns</key>

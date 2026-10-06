@@ -46,6 +46,10 @@
    '/Applications/Tuan/Fetch PR '
    'commit/.venv/lib/python3.14/site-packages/PyInstaller/hooks/rthooks/pyi_rth_inspect.py',
    'PYSOURCE'),
+  ('pyi_rth__tkinter',
+   '/Applications/Tuan/Fetch PR '
+   'commit/.venv/lib/python3.14/site-packages/PyInstaller/hooks/rthooks/pyi_rth__tkinter.py',
+   'PYSOURCE'),
   ('pyi_rth_pkgutil',
    '/Applications/Tuan/Fetch PR '
    'commit/.venv/lib/python3.14/site-packages/PyInstaller/hooks/rthooks/pyi_rth_pkgutil.py',
@@ -54,17 +58,13 @@
    '/Applications/Tuan/Fetch PR '
    'commit/.venv/lib/python3.14/site-packages/PyInstaller/hooks/rthooks/pyi_rth_multiprocessing.py',
    'PYSOURCE'),
-  ('pyi_rth__tkinter',
-   '/Applications/Tuan/Fetch PR '
-   'commit/.venv/lib/python3.14/site-packages/PyInstaller/hooks/rthooks/pyi_rth__tkinter.py',
-   'PYSOURCE'),
-  ('daily_report',
-   '/Applications/Tuan/Fetch PR commit/daily_report.py',
+  ('app_launcher',
+   '/Applications/Tuan/Fetch PR commit/app_launcher.py',
    'PYSOURCE')],
  [],
  False,
  False,
- 1790827054,
+ 1791252415,
  [('runw',
    '/Applications/Tuan/Fetch PR '
    'commit/.venv/lib/python3.14/site-packages/PyInstaller/bootloader/Darwin-64bit/runw',
